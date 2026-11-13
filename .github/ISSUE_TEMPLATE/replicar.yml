@@ -1,0 +1,60 @@
+name: Quiero replicarlo en mi ciudad
+description: Cuéntanos tu ciudad y qué proyecto te interesa. Te compartimos los datos y los scripts.
+title: "[Replicar] "
+labels: ["replicar"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por querer llevar Ciudad en Datos a tu ciudad. Lo que escribas aquí es público; si prefieres hablar en privado, escríbenos por WhatsApp (+52 228 180 3663) o desde droutech.solutions.
+  - type: input
+    id: ciudad
+    attributes:
+      label: Ciudad o municipio
+      placeholder: "Ej. Zona Metropolitana de Guadalajara"
+    validations:
+      required: true
+  - type: dropdown
+    id: proyectos
+    attributes:
+      label: ¿Qué proyectos te interesan?
+      multiple: true
+      options:
+        - Horas en Rojo
+        - Lo que respiramos
+        - Calle sin sombra
+        - Atlas de riesgo
+        - ¿Me alcanza?
+        - ¿Se puede caminar?
+        - ¿A dónde va tu dinero?
+        - ¿Qué tan digital es tu gobierno?
+        - Lo que prometieron
+        - ¿Hasta dónde llega el camión?
+    validations:
+      required: true
+  - type: dropdown
+    id: quien
+    attributes:
+      label: ¿Desde dónde lo harías?
+      options:
+        - Como ciudadano
+        - Organización civil
+        - Periodismo
+        - Universidad o investigación
+        - Gobierno
+        - Empresa
+        - Otro
+    validations:
+      required: true
+  - type: textarea
+    id: para-que
+    attributes:
+      label: ¿Para qué lo quieres usar?
+      description: Qué te gustaría mostrar o decidir con los datos de tu ciudad.
+    validations:
+      required: true
+  - type: input
+    id: contacto
+    attributes:
+      label: Contacto (opcional)
+      description: Correo o usuario donde te podamos buscar. Recuerda que esto es público.

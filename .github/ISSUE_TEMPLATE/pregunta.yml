@@ -1,0 +1,27 @@
+name: Propón una pregunta
+description: ¿Qué te gustaría ver con datos de tu ciudad?
+title: "[Pregunta] "
+labels: ["pregunta"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Las mejores preguntas nacen de una queja de todos los días. Escríbela como la dirías en la calle.
+  - type: textarea
+    id: pregunta
+    attributes:
+      label: Tu pregunta
+      placeholder: "Ej. ¿Cuántas escuelas de mi municipio no tienen una parada de camión cerca?"
+    validations:
+      required: true
+  - type: input
+    id: lugar
+    attributes:
+      label: ¿En qué ciudad o municipio?
+    validations:
+      required: true
+  - type: textarea
+    id: fuente
+    attributes:
+      label: ¿Conoces algún dato o fuente que ayude? (opcional)
+      description: Un enlace, una institución o una encuesta.

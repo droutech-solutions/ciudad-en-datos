@@ -1,0 +1,42 @@
+name: Encontré un error en un dato
+description: Si una cifra no cuadra, dinos dónde y con qué fuente.
+title: "[Error] "
+labels: ["error-en-dato"]
+body:
+  - type: dropdown
+    id: proyecto
+    attributes:
+      label: Proyecto
+      options:
+        - Horas en Rojo
+        - Lo que respiramos
+        - Calle sin sombra
+        - Atlas de riesgo
+        - ¿Me alcanza?
+        - ¿Se puede caminar?
+        - ¿A dónde va tu dinero?
+        - ¿Qué tan digital es tu gobierno?
+        - Lo que prometieron
+        - ¿Hasta dónde llega el camión?
+    validations:
+      required: true
+  - type: input
+    id: donde
+    attributes:
+      label: ¿Dónde está la cifra?
+      description: Enlace a la página y sección, o descripción de dónde aparece.
+    validations:
+      required: true
+  - type: textarea
+    id: que-dice
+    attributes:
+      label: ¿Qué dice y qué debería decir?
+    validations:
+      required: true
+  - type: textarea
+    id: fuente
+    attributes:
+      label: Fuente
+      description: Toda corrección necesita una fuente pública que la respalde.
+    validations:
+      required: true
